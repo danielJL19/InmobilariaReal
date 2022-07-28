@@ -1,0 +1,37 @@
+:root {
+    --bs-orange: #fd7e14;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/**CREADOS*/
+.bg-orange{
+    background-color:var(--bs-orange);
+}
+.text-gray-300 {
+    color: var(--bs-gray-300);
+}
+
+.img-creado {
+    background-image: url(../img/economico.jpeg);
+    min-height: 500px;
+    background-size: cover;
+    background-position: 0rem left;
+    background-repeat: no-repeat;
+}

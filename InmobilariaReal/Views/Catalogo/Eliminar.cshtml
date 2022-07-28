@@ -1,0 +1,46 @@
+﻿@model InmobilariaReal.Models.Producto
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-danger">Estas seguro de eliminar este producto?</h2>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Eliminar" asp-controller="Catalogo" method="post">
+            <input type="hidden" asp-for="IdProducto"/>
+            
+            <div class="mb-2">
+                <label class="form-label" asp-for="Nombre">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="Nombre" type="text" disabled/>
+            </div>
+
+             <div class="mb-2">
+                <label class="form-label" asp-for="Precio">Precio</label>
+                <input class="form-control form-control-sm" asp-for="Precio" type="number" disabled/>
+            </div>
+
+             <div class="mb-2">
+                <label class="form-label" asp-for="CantPieza">Cantidad Pieza</label>
+                <input class="form-control form-control-sm" asp-for="CantPieza" type="number" disabled/>
+            </div>
+
+             <div class="mb-2">
+                <label class="form-label" asp-for="CantBano">Cantidad Baño</label>
+                <input class="form-control form-control-sm" asp-for="CantBano" type="number" disabled/>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Idcategoria">Categoria</label>
+  
+                <input class="form-control" asp-for="oCategoria.Nombre" type="text" disabled/>
+            </div>
+           
+            <div class="mb-2">
+                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <a class="btn btn-dark " asp-action="Index" asp-controller="Catalogo">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
